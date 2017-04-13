@@ -1,6 +1,9 @@
 var numbers = [];
+//stores numbers
 
 function enterNumber() {
+    //if entered number is not a number then alerts user to enter a correct number
+    //if entered number is a number then it proceeds to count, sum, and average
     var entNumber = Number(document.numberForm.number.value);
     if(isNaN(entNumber)){
         alert("Please enter a number.")
@@ -13,10 +16,11 @@ function enterNumber() {
 }
 
 function numberValues() {
-    var count = 0;
-    document.getElementById("count").innerHTML = "Count: " + numbers.length;
+    //counts the numbers enetered from array
+    var count = numbers.length;
+    document.getElementById("count").innerHTML = "Count: " + count;
 
-    
+    //summation of the array of numbers
     var sum = 0;
     for (var i = 0; i <numbers.length; i++){
         sum = sum + numbers[i];
@@ -24,10 +28,9 @@ function numberValues() {
     
     document.getElementById("sum").innerHTML = "Sum: " + sum;
 
-    
+    //the mean/average of the numbers
     var mean = 0;
-    var allNumbers = numbers.length;
-    mean = (sum/allNumbers);
+    mean = (sum/count);
     document.getElementById("mean").innerHTML = "Mean(Avg): " + mean;
   
   
@@ -35,7 +38,6 @@ function numberValues() {
 
     
 function resetForm() {
-    location.reload();
-    event.preventDefault();
- 
+    //refreshes the page to start a new array
+   location.reload();
 }
