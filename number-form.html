@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Number Form</title>
+        <script type="text/javascript" src="numbers.js"></script>
+    
+    </head>
+    <body>
+        <h1>Number Form</h1>
+        <form name="numberForm">
+            <label for="enter">Enter numbers here:</label>
+            <input type="number" id="number">
+            <button type="submit" id="submit" onclick="enterNumber()">Submit</button>
+            <button type="reset" id="reset" onclick="resetForm()">Reset</button>
+        </form>
+       <section id="entries">
+           <p id="count">Count: </p>
+           <p id="sum">Sum: </p>
+           <p id="mean">Mean (Avg): </p>
+        </section>
+    </body>
+    
+</html>
